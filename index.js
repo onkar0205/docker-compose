@@ -82,7 +82,7 @@ app.delete('/databaseof_laptop/delete_byproduct/:product', (req, resp) => {
 app.listen(8081, (err) => {
     if (err) console.log(err)
     console.log("App is running on port 8081");
-    MongoCliant.connect('mongodb://127.0.0.1:27017', { useNewUrlParser: true }, (error, result) => {
+    MongoCliant.connect('mongodb://mongo_db:27017', { useNewUrlParser: true }, (error, result) => {
         if (error) throw error
         database = result.db('databaseof_laptop')
         console.log('connection succesful !')
